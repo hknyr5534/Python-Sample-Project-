@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWin"dow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1164</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1164</width>
+    <height>671</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+	background:#f2f2f2;
+}
+
+QStatusBar 
+{
+	border-top:1px solid #aaaaaa;
+	min-height:20px;
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0.2 #f4f4f4, stop:1 #e4e4e4);
+}
+
+QFrame#window
+{
+	padding:0px;
+	border-width:2px;/*边框宽度*/
+	border-style:solid;/*边框类型*/
+	/*用渐变色可以营造光晕边框效果*/
+	border-color:qlineargradient(x1:0, y1:1, x2:0, y2:0, stop:0 #999999, stop:1 #ffffff)/*上边框渐变色*/
+	  qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #999999, stop:1 #ffffff)/*右边框渐变色*/
+	  qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #999999, stop:1 #ffffff)/*下边框渐变色*/
+	  qlineargradient(x1:1, y1:0, x2:0, y2:0, stop:0 #999999, stop:1 #ffffff);/*左边框渐变色*/
+}
+
+
+QWidget#titlebar
+{
+	min-height:25px;/*用min-height设置标题栏高度*/
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0.2 #e4e4e4, stop:1 #d4d4d4);/*渐变背景色*/
+	border-bottom:1px solid #aaaaaa;
+}
+
+
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="kullaniciResmi">
+            <property name="minimumSize">
+             <size>
+              <width>230</width>
+              <height>240</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>230</width>
+              <height>240</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">:/iconlar/ticket.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Ad Soyad</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="adText">
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Sorun Bilgisi</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="soyadText">
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Sorun Açıklaması</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QTextEdit" name="textEdit"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Sorun Kategorisi</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QComboBox" name="fakulteCombo">
+          <property name="currentText">
+           <string>Donanım</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Donanım</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Yazılım</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="kaydetButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Sorun Bildir</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+              <normaloff>:/iconlar/icons/ok.png</normaloff>:/iconlar/icons/ok.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="silButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Kapat</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+              <normaloff>:/iconlar/icons/sil.png</normaloff>:/iconlar/icons/sil.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1164</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDosya">
+    <property name="title">
+     <string>Dosya</string>
+    </property>
+    <addaction name="actionA"/>
+    <addaction name="actionDB_Ba_lant_s_Kontrol_Et"/>
+    <addaction name="actionKaydet"/>
+    <addaction name="separator"/>
+    <addaction name="action_k"/>
+   </widget>
+   <widget class="QMenu" name="menuYard_m">
+    <property name="title">
+     <string>Yardım</string>
+    </property>
+    <addaction name="actionHakk_nda"/>
+   </widget>
+   <addaction name="menuDosya"/>
+   <addaction name="menuYard_m"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionDB_Kontrol"/>
+   <addaction name="actionKullan_c_Ekle"/>
+  </widget>
+  <action name="actionA">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/ac.png</normaloff>:/iconlar/icons/ac.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aç</string>
+   </property>
+  </action>
+  <action name="actionDB_Ba_lant_s_Kontrol_Et">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/yenile.png</normaloff>:/iconlar/icons/yenile.png</iconset>
+   </property>
+   <property name="text">
+    <string>DB Bağlantısı Kontrol Et</string>
+   </property>
+  </action>
+  <action name="actionKaydet">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/kaydet.png</normaloff>:/iconlar/icons/kaydet.png</iconset>
+   </property>
+   <property name="text">
+    <string>Kaydet</string>
+   </property>
+  </action>
+  <action name="action_k">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/cikis.png</normaloff>:/iconlar/icons/cikis.png</iconset>
+   </property>
+   <property name="text">
+    <string>Çıkış</string>
+   </property>
+  </action>
+  <action name="actionDB_Kontrol">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/yenile.png</normaloff>:/iconlar/icons/yenile.png</iconset>
+   </property>
+   <property name="text">
+    <string>DB Kontrol</string>
+   </property>
+  </action>
+  <action name="actionKullan_c_Ekle">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/ekle.png</normaloff>:/iconlar/icons/ekle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Kullanıcı Ekle</string>
+   </property>
+  </action>
+  <action name="actionHakk_nda">
+   <property name="icon">
+    <iconset resource="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc">
+     <normaloff>:/iconlar/icons/sifremi_unuttum.png</normaloff>:/iconlar/icons/sifremi_unuttum.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hakkında</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../221022-main/221022-main/SonOrnek/ui/kullanici_giris.qrc"/>
+ </resources>
+ <connections/>
+</ui>
